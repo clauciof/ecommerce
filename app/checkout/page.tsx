@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ArrowLeft, CreditCard, Smartphone, Lock, ShoppingBag } from "lucide-react"
+import { ArrowLeft, CreditCard, Smartphone, Lock, ShoppingBag, Heart } from "lucide-react"
 
 import styles from "../styles/navigation.module.css"
 import checkoutStyles from "../styles/checkout.module.css"
@@ -64,54 +64,73 @@ export default function CheckoutPage() {
   return (
     <div className={checkoutStyles.checkoutContainer}>
       {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-semibold text-gray-900">
-              Ponto Final
-            </Link>
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="text-gray-600 hover:text-gray-900">
-                <ShoppingBag className="h-5 w-5" />
-              </Button>
-            </div>
+      <nav className={styles.nav}>
+        <div className={styles.navContainer}>
+          <Link href="/" className={styles.navTitle}>
+            Ponto Final
+          </Link>
+
+          <div className={styles.navButtons}>
+            <Button variant="ghost" size="icon" className="text-gray-600 hover:text-gray-900">
+              <Heart className="h-5 w-5" />
+            </Button>
+            <Button variant="ghost" size="icon" className="text-gray-600 hover:text-gray-900">
+              <ShoppingBag className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </nav>
 
       {/* Product Menu Bar */}
       <nav className={styles.navigation}>
-        <div className={styles.navigationContainer}>
-          <Link href="/" className={styles.navigationBrand}>
-            Ponto Final
-          </Link>
-          <div className={styles.navigationLinks}>
-            <Link href="/products" className={styles.navigationLink}>
+      <div className="bg-gray-50 border-b border-gray-200 sticky top-16 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center h-12 space-x-8 overflow-x-auto">
+            <Link
+              href="/products"
+              className="text-gray-900 font-medium text-sm whitespace-nowrap py-2 px-3 rounded-md bg-white shadow-sm"
+            >
               All Products
             </Link>
-            <Link href="/products?category=skirts" className={styles.navigationLink}>
+            <Link
+              href="/products?category=skirts"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Skirts
             </Link>
-            <Link href="/products?category=scarfs" className={styles.navigationLink}>
+            <Link
+              href="/products?category=scarfs"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Scarfs
             </Link>
-            <Link href="/products?category=buckets" className={styles.navigationLink}>
+            <Link
+              href="/products?category=buckets"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Buckets
             </Link>
-            <Link href="/products?category=hats" className={styles.navigationLink}>
+            <Link
+              href="/products?category=hats"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Hats
             </Link>
-            <Link href="/products?category=cardigans" className={styles.navigationLink}>
+            <Link
+              href="/products?category=cardigans"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Cardigans
             </Link>
-            <Link href="/products?category=bags" className={styles.navigationLink}>
+            <Link
+              href="/products?category=bags"
+              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
+            >
               Bags
             </Link>
-            <Button variant="ghost" size="icon" className={styles.navigationCart}>
-              <ShoppingBag className="h-5 w-5" />
-            </Button>
           </div>
         </div>
+      </div>
       </nav>
 
       <div className={checkoutStyles.checkoutContent}>

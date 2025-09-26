@@ -1,0 +1,27 @@
+.aboutSection {
+  @apply bg-gray-50 py-20;
+}
+
+.aboutContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.aboutGrid {
+  @apply grid lg:grid-cols-2 gap-12 items-center;
+}
+
+.aboutImage {
+  @apply rounded-2xl shadow-xl;
+}
+
+.aboutTitle {
+  @apply text-4xl font-semibold text-gray-900 mb-6;
+}
+
+.aboutDescription {
+  @apply text-gray-600 mb-6 leading-relaxed text-lg;
+}
+
+.aboutButton {
+  @apply bg-gray-900 hover:bg-gray-800 text-white;
+}

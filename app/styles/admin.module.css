@@ -1,0 +1,143 @@
+.adminContainer {
+  @apply min-h-screen bg-gray-50;
+}
+
+.adminContent {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.adminHeader {
+  @apply mb-8;
+}
+
+.adminTitle {
+  @apply text-3xl font-semibold text-gray-900 mb-2;
+}
+
+.adminSubtitle {
+  @apply text-gray-600;
+}
+
+.adminForm {
+  @apply space-y-8;
+}
+
+.adminCard {
+  /* Uses default card styles */
+}
+
+.adminCardHeader {
+  /* Uses default card header styles */
+}
+
+.adminCardTitle {
+  @apply text-xl;
+}
+
+.adminCardContent {
+  @apply space-y-6;
+}
+
+.formGroup {
+  @apply space-y-2;
+}
+
+.formLabel {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.formInput {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900;
+}
+
+.formTextarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900 resize-y;
+}
+
+.formSelect {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900;
+}
+
+.gridTwoColumns {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.imageUploadSection {
+  @apply space-y-4;
+}
+
+.imageUploadArea {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-gray-400 transition-colors cursor-pointer;
+}
+
+.imageUploadContent {
+  @apply text-center;
+}
+
+.imageUploadIcon {
+  @apply mx-auto h-12 w-12 text-gray-400;
+}
+
+.imageUploadText {
+  @apply mt-2 text-sm text-gray-600;
+}
+
+.imageUploadSubtext {
+  @apply text-xs text-gray-500;
+}
+
+.imagePreviewGrid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4;
+}
+
+.imagePreviewItem {
+  @apply relative;
+}
+
+.imagePreview {
+  @apply w-full h-24 object-cover rounded-lg border border-gray-200;
+}
+
+.imageRemoveButton {
+  @apply absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600 transition-colors;
+}
+
+.submitButton {
+  @apply w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-4 rounded-md transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.submitButtonLoading {
+  @apply bg-gray-700 cursor-not-allowed;
+}
+
+.successMessage {
+  @apply bg-green-50 border border-green-200 rounded-md p-4 mb-6;
+}
+
+.successMessageContent {
+  @apply flex items-center gap-2 text-green-800;
+}
+
+.errorMessage {
+  @apply bg-red-50 border border-red-200 rounded-md p-4 mb-6;
+}
+
+.errorMessageContent {
+  @apply flex items-center gap-2 text-red-800;
+}
+
+.fieldError {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.navigationLinks {
+  @apply flex items-center gap-4 mb-8;
+}
+
+.navigationLink {
+  @apply text-gray-600 hover:text-gray-900 transition-colors;
+}
+
+.requiredIndicator {
+  @apply text-red-500;
+}

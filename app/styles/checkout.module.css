@@ -1,0 +1,151 @@
+.checkoutContainer {
+  @apply min-h-screen bg-gray-50;
+}
+
+.checkoutContent {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.checkoutHeader {
+  @apply mb-8;
+}
+
+.checkoutBackLink {
+  @apply inline-flex items-center text-gray-600 hover:text-gray-900 mb-4;
+}
+
+.checkoutTitle {
+  @apply text-3xl font-semibold text-gray-900;
+}
+
+.checkoutGrid {
+  @apply grid lg:grid-cols-2 gap-12;
+}
+
+.checkoutForm {
+  @apply space-y-8;
+}
+
+.checkoutCard {
+  /* Uses default card styles */
+}
+
+.checkoutCardHeader {
+  /* Uses default card header styles */
+}
+
+.checkoutCardTitle {
+  @apply text-xl;
+}
+
+.checkoutCardContent {
+  @apply space-y-4;
+}
+
+.checkoutFormGrid {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.checkoutFormGridThree {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.checkoutLabel {
+  /* Uses default label styles */
+}
+
+.checkoutInput {
+  @apply mt-1;
+}
+
+.checkoutSelect {
+  @apply mt-1;
+}
+
+.paymentTabs {
+  /* Uses default tabs styles */
+}
+
+.paymentTabsList {
+  @apply grid w-full grid-cols-2;
+}
+
+.paymentTabsTrigger {
+  @apply flex items-center gap-2;
+}
+
+.paymentTabsContent {
+  @apply space-y-4 mt-6;
+}
+
+.pixPaymentInfo {
+  @apply text-center p-6 bg-gray-50 rounded-lg;
+}
+
+.pixIcon {
+  @apply h-12 w-12 mx-auto mb-4 text-gray-600;
+}
+
+.pixTitle {
+  @apply text-lg font-semibold mb-2;
+}
+
+.pixDescription {
+  @apply text-gray-600 mb-4;
+}
+
+.pixFeatures {
+  @apply text-sm text-gray-500;
+}
+
+.completeOrderButton {
+  @apply w-full bg-gray-900 hover:bg-gray-800 text-white;
+}
+
+.orderSummary {
+  @apply sticky top-24;
+}
+
+.orderItem {
+  @apply flex items-center space-x-4;
+}
+
+.orderItemImage {
+  @apply rounded-lg;
+}
+
+.orderItemInfo {
+  @apply flex-1;
+}
+
+.orderItemName {
+  @apply font-semibold text-gray-900;
+}
+
+.orderItemDetails {
+  @apply text-sm text-gray-600;
+}
+
+.orderItemPrice {
+  @apply font-semibold;
+}
+
+.orderTotals {
+  @apply space-y-2;
+}
+
+.orderTotalRow {
+  @apply flex justify-between;
+}
+
+.orderTotalFinal {
+  @apply flex justify-between text-lg font-semibold;
+}
+
+.securityNotice {
+  @apply bg-gray-50 p-4 rounded-lg;
+}
+
+.securityNoticeContent {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}

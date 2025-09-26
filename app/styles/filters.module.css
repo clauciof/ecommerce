@@ -1,0 +1,19 @@
+.filtersContainer {
+  @apply flex flex-col sm:flex-row gap-4 mb-12 p-6 bg-gray-50 rounded-2xl;
+}
+
+.filtersLabel {
+  @apply flex items-center gap-2;
+}
+
+.filtersIcon {
+  @apply h-4 w-4 text-gray-600;
+}
+
+.filtersText {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.filterSelect {
+  @apply w-48 bg-white;
+}

@@ -1,0 +1,95 @@
+.productsSection {
+  @apply py-20 bg-white;
+}
+
+.productsContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.productsHeader {
+  @apply text-center mb-16;
+}
+
+.productsTitle {
+  @apply text-4xl font-semibold text-gray-900 mb-4;
+}
+
+.productsDescription {
+  @apply text-gray-600 max-w-2xl mx-auto text-lg;
+}
+
+.productsGrid {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.productCard {
+  @apply cursor-pointer border-gray-200 hover:shadow-xl transition-all duration-300 bg-white;
+}
+
+.productImageContainer {
+  @apply relative overflow-hidden rounded-t-xl;
+}
+
+.productImage {
+  @apply w-full h-64 object-cover transition-transform duration-500;
+}
+
+.productFavoriteButton {
+  @apply absolute top-3 right-3 opacity-0 transition-opacity bg-white/90 hover:bg-white;
+}
+
+.productBadge {
+  @apply absolute top-3 left-3 bg-white text-gray-700 capitalize;
+}
+
+.productContent {
+  @apply p-6;
+}
+
+.productName {
+  @apply font-semibold text-gray-900 mb-2 text-lg;
+}
+
+.productRating {
+  @apply flex items-center mb-3;
+}
+
+.productStars {
+  @apply flex items-center;
+}
+
+.productStar {
+  @apply h-4 w-4;
+}
+
+.productStarFilled {
+  @apply text-blue-500 fill-current;
+}
+
+.productStarEmpty {
+  @apply text-gray-300;
+}
+
+.productReviews {
+  @apply text-sm text-gray-500 ml-2;
+}
+
+.productColors {
+  @apply flex flex-wrap gap-1 mb-4;
+}
+
+.productColorBadge {
+  @apply text-xs;
+}
+
+.productPrice {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.loadMoreContainer {
+  @apply text-center mt-16;
+}
+
+.loadMoreButton {
+  @apply border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50;
+}

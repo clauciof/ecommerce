@@ -1,0 +1,131 @@
+.productDetailContainer {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.breadcrumb {
+  @apply flex items-center gap-2 mb-8 text-sm text-gray-600;
+}
+
+.breadcrumbLink {
+  @apply hover:text-gray-900;
+}
+
+.breadcrumbCurrent {
+  @apply text-gray-900;
+}
+
+.productDetailGrid {
+  @apply grid lg:grid-cols-2 gap-16;
+}
+
+.productImageMain {
+  @apply w-full rounded-2xl shadow-xl;
+  max-width: 400px;   /* largura máxima desejada */
+  max-height: 500px;
+  width: 100%;        /* ocupa toda a largura do contêiner até o máximo */
+  height: auto;       /* mantém a proporção da imagem */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.productImageThumbnails {
+  @apply flex gap-4;
+}
+
+.productImageThumbnail {
+  @apply border-2 rounded-xl overflow-hidden transition-all;
+}
+
+.productImageThumbnailActive {
+  @apply border-gray-900;
+}
+
+.productImageThumbnailInactive {
+  @apply border-gray-200 hover:border-gray-400;
+}
+
+.productImageThumbnailImage {
+  @apply w-20 h-20 object-cover;
+}
+
+.productDetailInfo {
+  @apply mb-6;
+}
+
+.productDetailBadge {
+  @apply mb-3 capitalize bg-gray-100 text-gray-700;
+}
+
+.productDetailTitle {
+  @apply text-4xl font-semibold text-gray-900 mb-4;
+}
+
+.productDetailRating {
+  @apply flex items-center mb-6;
+}
+
+.productDetailPrice {
+  @apply text-3xl font-semibold text-gray-900 mb-8;
+}
+
+.productOptions {
+  @apply space-y-8;
+}
+
+.productOptionLabel {
+  @apply block text-sm font-medium text-gray-900 mb-3;
+}
+
+.productOptionSelect {
+  @apply bg-white;
+}
+
+.quantityControls {
+  @apply flex items-center gap-4;
+}
+
+.quantityDisplay {
+  @apply w-12 text-center font-medium text-lg;
+}
+
+.productActions {
+  @apply flex gap-4;
+}
+
+.buyNowButton {
+  @apply w-full bg-gray-900 hover:bg-gray-800 text-white;
+}
+
+.productTabs {
+  @apply mt-20;
+}
+
+.productTabsList {
+  @apply grid w-full grid-cols-3 bg-gray-100;
+}
+
+.productTabsContent {
+  @apply mt-8;
+}
+
+.productDescription {
+  @apply text-gray-600 leading-relaxed text-lg;
+}
+
+.productFeaturesList {
+  @apply space-y-3;
+}
+
+.productFeatureItem {
+  @apply flex items-center text-gray-600;
+}
+
+.productFeatureBullet {
+  @apply w-2 h-2 bg-blue-500 rounded-full mr-4;
+}
+
+.backButton {
+  @apply border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50;
+}

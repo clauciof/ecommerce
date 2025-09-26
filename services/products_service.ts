@@ -19,7 +19,7 @@ export async function getProductById(id: string) {
 }
 
 export async function getFeaturedProducts() {
-  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/`
+  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/new-products/`
 
   const res = await axios.get(url)
   if (res.status !== 200) throw new Error("Erro ao buscar produto")

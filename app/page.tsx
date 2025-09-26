@@ -62,13 +62,14 @@ export default function HomePage() {
   }, [])
 
   // Checa inicialização do Firebase e faz log
-  if (typeof window !== "undefined") {
-    if (isFirebaseInitialized()) {
-      console.log("Firebase inicializado com sucesso!");
-    } else {
-      console.error("Falha ao inicializar o Firebase.");
-    }
-  }
+  // if (typeof window !== "undefined") {
+  //   if (isFirebaseInitialized()) {
+  //     console.log("Firebase inicializado com sucesso!");
+  //   } else {
+  //     console.error("Falha ao inicializar o Firebase.");
+  //   }
+  // }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -94,28 +95,31 @@ export default function HomePage() {
       {/* Product Menu Bar */}
       <div className={styles.productMenuBar}>
         <div className={styles.productMenuContainer}>
-          <div className={styles.productMenuContent}>
-            <Link href="/products" className={styles.productMenuLink}>
-              All Products
-            </Link>
-            <Link href="/products?category=skirts" className={styles.productMenuLink}>
-              Skirts
-            </Link>
-            <Link href="/products?category=scarfs" className={styles.productMenuLink}>
-              Scarfs
-            </Link>
-            <Link href="/products?category=buckets" className={styles.productMenuLink}>
-              Buckets
-            </Link>
-            <Link href="/products?category=hats" className={styles.productMenuLink}>
-              Hats
-            </Link>
-            <Link href="/products?category=cardigans" className={styles.productMenuLink}>
-              Cardigans
-            </Link>
-            <Link href="/products?category=bags" className={styles.productMenuLink}>
-              Bags
-            </Link>
+          {/* scroller com overflow e padding “full-bleed” no mobile */}
+          <div className={`${styles.productMenuScroller} scrollbar-none`} role="tablist" aria-label="Categorias">
+            <div className={styles.productMenuContent}>
+              <Link href="/products" className={styles.productMenuLink}>
+                All Products
+              </Link>
+              <Link href="/products?category=skirts" className={styles.productMenuLink}>
+                Skirts
+              </Link>
+              <Link href="/products?category=scarfs" className={styles.productMenuLink}>
+                Scarfs
+              </Link>
+              <Link href="/products?category=buckets" className={styles.productMenuLink}>
+                Buckets
+              </Link>
+              <Link href="/products?category=hats" className={styles.productMenuLink}>
+                Hats
+              </Link>
+              <Link href="/products?category=cardigans" className={styles.productMenuLink}>
+                Cardigans
+              </Link>
+              <Link href="/products?category=bags" className={styles.productMenuLink}>
+                Bags
+              </Link>
+            </div>
           </div>
         </div>
       </div>

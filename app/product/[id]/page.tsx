@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import styles from "../../styles/navigation.module.css"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Heart, Star, ShoppingBag, Minus, Plus, ArrowLeft } from "lucide-react"
@@ -63,18 +64,18 @@ export default function ProductPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-semibold text-gray-900">
+      <nav className={styles.nav}>
+        <div className={styles.navContainer}>
+          <div className={styles.navContent}>
+            <Link href="/" className={styles.logo}>
               Ponto Final
             </Link>
 
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="text-gray-600 hover:text-gray-900">
+            <div className={styles.navActions}>
+              <Button variant="ghost" size="icon" className={styles.navButton}>
                 <Heart className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-600 hover:text-gray-900">
+              <Button variant="ghost" size="icon" className={styles.navButton}>
                 <ShoppingBag className="h-5 w-5" />
               </Button>
             </div>
@@ -83,51 +84,33 @@ export default function ProductPage() {
       </nav>
 
       {/* Product Menu Bar */}
-      <div className="bg-gray-50 border-b border-gray-200 sticky top-16 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center h-12 space-x-8 overflow-x-auto">
-            <Link
-              href="/products"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              All Products
-            </Link>
-            <Link
-              href="/products?category=skirts"
-              className="text-gray-900 font-medium text-sm whitespace-nowrap py-2 px-3 rounded-md bg-white shadow-sm"
-            >
-              Skirts
-            </Link>
-            <Link
-              href="/products?category=scarfs"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              Scarfs
-            </Link>
-            <Link
-              href="/products?category=buckets"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              Buckets
-            </Link>
-            <Link
-              href="/products?category=hats"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              Hats
-            </Link>
-            <Link
-              href="/products?category=cardigans"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              Cardigans
-            </Link>
-            <Link
-              href="/products?category=bags"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium whitespace-nowrap py-2 px-3 rounded-md hover:bg-white"
-            >
-              Bags
-            </Link>
+      <div className={styles.productMenuBar}>
+        <div className={styles.productMenuContainer}>
+          {/* scroller com overflow e padding “full-bleed” no mobile */}
+          <div className={`${styles.productMenuScroller} scrollbar-none`} role="tablist" aria-label="Categorias">
+            <div className={styles.productMenuContent}>
+              <Link href="/products" className={styles.productMenuLink}>
+                All Products
+              </Link>
+              <Link href="/products?category=skirts" className={styles.productMenuLink}>
+                Skirts
+              </Link>
+              <Link href="/products?category=scarfs" className={styles.productMenuLink}>
+                Scarfs
+              </Link>
+              <Link href="/products?category=buckets" className={styles.productMenuLink}>
+                Buckets
+              </Link>
+              <Link href="/products?category=hats" className={styles.productMenuLink}>
+                Hats
+              </Link>
+              <Link href="/products?category=cardigans" className={styles.productMenuLink}>
+                Cardigans
+              </Link>
+              <Link href="/products?category=bags" className={styles.productMenuLink}>
+                Bags
+              </Link>
+            </div>
           </div>
         </div>
       </div>

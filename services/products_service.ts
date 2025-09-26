@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export async function getProducts() {
-  let url = "http://localhost:5001/ponto-final-270d8/us-central1/api/products/"
+  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/`
 
   const res = await axios.get(url)
   if (res.status !== 200) throw new Error("Erro ao buscar produtos")
@@ -10,7 +10,7 @@ export async function getProducts() {
 }
 
 export async function getProductById(id: string) {
-  let url = `http://localhost:5001/ponto-final-270d8/us-central1/api/product/${id}`
+  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/product/${id}`
 
   const res = await axios.get(url)
   if (res.status !== 200) throw new Error("Erro ao buscar produto")
@@ -19,7 +19,7 @@ export async function getProductById(id: string) {
 }
 
 export async function getFeaturedProducts() {
-  let url = `http://localhost:5001/ponto-final-270d8/us-central1/api/products/`
+  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/`
 
   const res = await axios.get(url)
   if (res.status !== 200) throw new Error("Erro ao buscar produto")
@@ -35,7 +35,7 @@ export async function createProduct(productData: {
   image_url: string[]
   storage_url: string[]
 }) {
-  let url = "http://localhost:5001/ponto-final-270d8/us-central1/api/products/"
+  let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/products/`
 
   const res = await axios.post(url, productData)
   if (res.status !== 200 && res.status !== 201) throw new Error("Erro ao criar produto")

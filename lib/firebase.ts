@@ -3,13 +3,13 @@ import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyApwuCowzMTf2rG6hsGivjJuIcVGlhfVg4",
-  authDomain: "ponto-final-270d8.firebaseapp.com",
-  projectId: "ponto-final-270d8",
-  storageBucket: "ponto-final-270d8.appspot.com",
-  messagingSenderId: "810113170968",
-  appId: "1:810113170968:web:0f4fa8fd165124623acd6d",
-  measurementId: "G-FJ5L7Z70Q7"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID!
 };
 
 let app: FirebaseApp;
